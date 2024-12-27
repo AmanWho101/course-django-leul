@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <form action="/firstcrud/{{data.id}}/update" method="POST">
+        {% csrf_token %}
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" class="fname" name="fname" value="{{data.fname}}"> <br> <br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" class="lname" name="lname" value="{{data.lname}}"> <br> <br>
+        <label for="age">age</label>
+        <input type="number" id="age" class="age" name="age" value="{{data.age}}"> <br> <br>
+        <label for="address">address</label>
+        <input type="text" id="address" class="address" name="address" value="{{data.address}}"> <br> <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
