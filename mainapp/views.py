@@ -28,9 +28,7 @@ def store(request):
             age=request.POST.get('age'),
             address=request.POST.get('address'),
         )
-    store_data.save()
-    all_data = Student.objects.all()
-    context={'all_data':all_data}
+        store_data.save()
     return redirect('/firstcrud')
 # edit page data=>store db
 def update(request,id):
